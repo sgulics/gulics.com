@@ -12,7 +12,7 @@ class LogHelperTest < Test::Unit::TestCase
   def test_should_pass_in_callers_classname_method_name_and_line_number
     Logger.any_instance.expects(:debug).with("LogHelperExample:do_something:(5):entering method").once
     Logger.any_instance.expects(:debug).with("LogHelperExample:do_something:(7):done").once
-    Object.any_instance.expects(:puts).never
+    #Object.any_instance.expects(:puts).never
     example = LogHelperExample.new
     example.do_something
   end
